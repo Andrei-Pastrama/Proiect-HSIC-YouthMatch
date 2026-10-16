@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="YouthMatch îi ajută pe elevi să găsească activități și programe potrivite intereselor lor."
+    />
+    <meta name="theme-color" content="#f7f8fc" />
+    <title>YouthMatch</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#17213d",
+              violet: { 600: "#6558e8", 700: "#5144d2" },
+            },
+            fontFamily: {
+              sans: ["DM Sans", "Inter", "sans-serif"],
+              display: ["Space Grotesk", "DM Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Frontend2.css" />
+  </head>
+  <body class="bg-[#f7f8fc] font-sans text-slate-800 antialiased">
+    <a class="announcement-bar" href="#acasa" aria-label="YouthMatch — înapoi la începutul paginii">
+      <span class="announcement-dot"></span>
+      YouthMatch MVP · Găsește-ți următoarea experiență
+      <i data-lucide="arrow-up-right" class="announcement-icon"></i>
+    </a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#acasa" aria-label="YouthMatch — pagina principală">
+          <span class="brand-mark"><i data-lucide="compass"></i></span>
+          <span>YouthMatch</span>
+          <span class="beta-badge">MVP</span>
+        </a>
+        <nav class="main-nav" aria-label="Navigare principală">
+          <a class="nav-link active" href="#oportunitati">Explorează oportunități</a>
+          <a class="nav-link" href="#match-ai">Găsește o idee</a>
+          <a class="nav-link" href="#organizatii">Pentru organizații</a>
+        </nav>
+        <button class="button button-dark header-cta" id="account-open-header" type="button">
+          <i data-lucide="user-round-plus"></i>
+          <span>Creează cont gratuit</span>
+        </button>
+        <div class="language-control">
+          <button class="language-trigger" id="language-trigger" type="button" aria-label="Select language" aria-haspopup="menu" aria-expanded="false" aria-controls="language-menu">
+            <i data-lucide="languages" aria-hidden="true"></i>
+            <span id="language-code">RO</span>
+            <span class="language-flag" id="language-flag" aria-hidden="true"></span>
+            <i data-lucide="chevron-down" class="language-chevron" aria-hidden="true"></i>
+          </button>
+          <div class="language-menu hidden" id="language-menu" role="menu" aria-label="Select language"></div>
+        </div>
+      </div>
+    </header>
+
+    <main id="acasa">
+      <section class="hero-section">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-sparkle">✳</span> MAI PUȚIN SCROLL. MAI MULTE EXPERIENȚE.</div>
+            <h1>Găsește ceva<br /><span>pe stilul tău.</span></h1>
+            <p class="hero-description">
+              Programe de voluntariat, schimburi de tineri și activități digitale, într-un singur loc.
+              Alege ce te atrage și verifică detaliile la organizator.
+            </p>
+            <div class="hero-actions">
+              <a href="#oportunitati" class="button button-primary">
+                Descoperă oportunități <i data-lucide="arrow-down-right"></i>
+              </a>
+              <div class="social-proof">
+                <span class="account-proof-icon"><i data-lucide="circle-check"></i></span>
+                <span><strong>Profil personalizat</strong> · experiențe potrivite ție</span>
+              </div>
+            </div>
+            <div class="hero-trust"><i data-lucide="shield-check"></i> Gratuit</div>
+          </div>
+
+          <div class="hero-visual" aria-label="Previzualizare YouthMatch">
+            <div class="visual-topline"><span class="live-dot"></span> OPORTUNITĂȚI DIN SURSE OFICIALE</div>
+            <div class="match-orbit">
+              <div class="orbit-ring ring-outer"></div>
+              <div class="orbit-ring ring-inner"></div>
+              <div class="orbit-ring ring-track ring-track-a"></div>
+              <div class="orbit-ring ring-track ring-track-b"></div>
+              <div class="orbit-ring ring-track ring-track-c"></div>
+              <span class="orbit-spark orbit-spark-a">✦</span>
+              <span class="orbit-spark orbit-spark-b">✧</span>
+              <div class="orbit-center">
+                <i data-lucide="sparkles"></i>
+                <strong>YM</strong>
+                <span>GĂSEȘTE CE<br />ȚI SE POTRIVEȘTE</span>
+              </div>
+              <div class="planet-field" id="planet-field"></div>
+              <div class="planet-tooltip hidden" id="planet-tooltip" role="status" aria-live="polite">
+                <span class="planet-tooltip-type"></span>
+                <strong class="planet-tooltip-title"></strong>
+                <span class="planet-tooltip-description"></span>
+              </div>
+            </div>
+            <button class="floating-card profile-float" id="account-open" type="button" aria-haspopup="dialog" aria-controls="account-dialog">
+              <div class="profile-avatar">A</div>
+              <div class="profile-card-main">
+                <strong id="profile-title">Creează cont gratuit</strong>
+                <span id="profile-subtitle">Salvează-ți profilul și găsește oportunități</span>
+              </div>
+              <span class="profile-check"><i data-lucide="user-round-plus" id="profile-icon"></i></span>
+            </button>
+            <span class="visual-note">tu alegi ce ți se potrivește <span>↗</span></span>
+          </div>
+        </div>
+
+        <div class="stats-strip">
+          <div class="stat-item"><strong>8</strong><span>direcții de explorat</span></div>
+          <span class="stat-divider"></span>
+          <div class="stat-item"><strong>Cont</strong><span>gratuit</span></div>
+          <span class="stat-divider"></span>
+          <div class="stat-item"><strong>Tu</strong><span>alegi ce explorezi</span></div>
+          <span class="stats-note"><i data-lucide="sparkles"></i> versiune MVP · feedback-ul tău contează</span>
+        </div>
+      </section>
+
+      <section class="opportunities-section section-wrap" id="oportunitati">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow section-eyebrow">PRIMUL PAS, FĂRĂ COMPLICAȚII <span>✳</span></div>
+            <h2>Ce ai vrea să încerci<span class="heading-period">?</span></h2>
+            <p class="section-subtitle">Răsfoiește programe reale. Apasă pe sursă pentru date, condiții și înscriere.</p>
+          </div>
+          <div class="opportunity-count"><span id="opportunity-count">08</span> idei de explorat <span class="count-pulse"></span></div>
+        </div>
+
+        <div class="radar-status" id="radar-status" role="status" aria-live="polite">
+          <i data-lucide="scan-search"></i>
+          <span>Radar local: verifică datele cunoscute și separă voluntariatele viitoare. Sursele externe nu sunt monitorizate live.</span>
+          <button id="radar-refresh" type="button">Verifică acum</button>
+        </div>
+        <div id="opportunity-controls"></div>
+
+        <div class="cards-grid" id="opportunity-grid" aria-live="polite"></div>
+        <div id="empty-state" class="hidden"></div>
+        <div class="feed-footer">
+          <span><i data-lucide="info"></i> YouthMatch este un prototip. Verifică mereu vârsta, perioada și înscrierea pe site-ul oficial.</span>
+          <button id="show-all-button" class="text-button">Arată toate <i data-lucide="arrow-right"></i></button>
+        </div>
+      </section>
+
+      <section class="match-section section-wrap" id="match-ai">
+        <div class="match-intro">
+          <div class="eyebrow section-eyebrow">NU ȘTII DE UNDE SĂ ÎNCEPI? <span>✳</span></div>
+          <h2>Hai să găsim<br /><span>un punct de pornire.</span></h2>
+          <p>Alege ce-ți place și adaugă câteva lucruri la care te pricepi. YouthMatch îți arată o sugestie simplă — nu e test și nu decide în locul tău.</p>
+          <div class="match-points">
+            <div><span class="check-dot"><i data-lucide="check"></i></span><span><strong>Nu ai nevoie de experiență</strong><small>Începe cu ce te interesează.</small></span></div>
+            <div><span class="check-dot"><i data-lucide="check"></i></span><span><strong>Sugestii ghidate de interesele tale</strong><small>Selectează domenii și află de unde să începi.</small></span></div>
+            <div><span class="check-dot"><i data-lucide="check"></i></span><span><strong>Tu alegi următorul pas</strong><small>Detaliile și înscrierea sunt la organizator.</small></span></div>
+          </div>
+        </div>
+        <div id="simulator-mount"></div>
+      </section>
+
+      <section class="organizations-section section-wrap" id="organizatii">
+        <div class="org-decoration decor-one"></div><div class="org-decoration decor-two"></div>
+        <div class="org-content">
+          <div class="org-copy">
+            <div class="eyebrow org-eyebrow">EXTRA · DEMO PENTRU ORGANIZAȚII <span>✳</span></div>
+            <h2>Ai un proiect<br /><span>pentru tineri?</span></h2>
+            <p>Formularul de mai jos e doar o previzualizare. În acest MVP, anunțul nu se publică și nu este trimis nicăieri.</p>
+          </div>
+          <div id="org-form-mount"></div>
+        </div>
+      </section>
+
+      <section class="final-cta section-wrap">
+        <div class="final-cta-spark">✳</div>
+        <div><div class="eyebrow section-eyebrow">GATA DE UN PRIM PAS? <span>✳</span></div><h2>Începe cu ceva<br />care te face curios.</h2><p>Nu trebuie să ai tot planul. Alege doar ce vrei să explorezi.</p></div>
+        <a href="#oportunitati" class="button button-primary">Hai să vedem <i data-lucide="arrow-up-right"></i></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#acasa"><span class="brand-mark"><i data-lucide="compass"></i></span><span>YouthMatch</span></a>
+      <span>Făcut cu <span class="footer-heart">♥</span> pentru elevii care vor să încerce ceva nou.</span>
+      <span>© 2026 YouthMatch · MVP</span>
+    </footer>
+    <dialog class="activity-dialog" id="activity-dialog" aria-labelledby="activity-dialog-title">
+      <div class="activity-dialog-card">
+        <button class="account-close" id="activity-close" type="button" aria-label="Închide"><i data-lucide="x"></i></button>
+        <span class="type-badge" id="activity-category"></span>
+        <h2 id="activity-dialog-title"></h2>
+        <p class="activity-organization" id="activity-organization"></p>
+        <div class="activity-facts">
+          <div><strong>Locație</strong><span id="activity-location"></span></div>
+          <div><strong>Perioadă</strong><span id="activity-period"></span></div>
+        </div>
+        <section class="ai-summary-panel" aria-labelledby="ai-summary-heading">
+          <div class="ai-summary-heading">
+            <span class="ai-summary-icon"><i data-lucide="sparkles"></i></span>
+            <div><span class="simulator-kicker">YOUTHMATCH AI</span><h3 id="ai-summary-heading">Rezumat și context</h3></div>
+          </div>
+          <p class="ai-summary-status" id="ai-summary-status" role="status" aria-live="polite"></p>
+          <div class="ai-summary-content hidden" id="ai-summary-content">
+            <section><h4>Despre activitate</h4><p id="ai-summary-text"></p></section>
+            <section><h4>Context și alternative</h4><p id="ai-market-insight"></p></section>
+            <section><h4>Cui i se potrivește</h4><p id="ai-eligibility"></p></section>
+            <section><h4>Date și durată</h4><p id="ai-dates"></p></section>
+            <section><h4>Cum aplici</h4><p id="ai-application-steps"></p></section>
+            <section class="account-link-section">
+              <h4>Conturi și înscriere</h4>
+              <p class="account-link-disclaimer">YouthMatch nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.</p>
+              <div class="account-link-actions">
+                <a class="button button-primary hidden" id="ai-account-create" target="_blank" rel="noopener noreferrer">Cont / înscriere la organizator <i data-lucide="external-link"></i></a>
+                <a class="button button-outline hidden" id="ai-account-delete" target="_blank" rel="noopener noreferrer">Informații despre ștergerea contului <i data-lucide="external-link"></i></a>
+              </div>
+              <p id="ai-account-links-note"></p>
+            </section>
+            <section>
+              <h4>Surse verificate</h4>
+              <ul class="ai-citations" id="ai-citations"></ul>
+              <p class="ai-verified-at" id="ai-verified-at"></p>
+            </section>
+          </div>
+        </section>
+        <div class="activity-dialog-actions">
+          <a class="button button-primary" id="activity-source-link" target="_blank" rel="noopener noreferrer">Pagina oficială a activității <i data-lucide="external-link"></i></a>
+          <span class="activity-data-note">Rezumatele AI sunt orientative; confirmă condițiile și datele la organizator.</span>
+        </div>
+      </div>
+    </dialog>
+    <dialog class="account-dialog" id="account-dialog" aria-labelledby="account-dialog-title">
+      <div class="account-dialog-card">
+        <button class="account-close" id="account-close" type="button" aria-label="Închide"><i data-lucide="x"></i></button>
+        <div class="account-dialog-icon"><i data-lucide="user-round-plus"></i></div>
+        <h2 id="account-dialog-title">Creează cont YouthMatch</h2>
+        <p class="account-dialog-note">Demo local: contul este disponibil doar în browserul acestui dispozitiv; nu există server sau sincronizare.</p>
+        <div class="account-mode-switch" id="account-mode-switch" role="tablist" aria-label="Tipul de acces">
+          <button class="account-mode active" id="account-register-mode" type="button" role="tab" aria-selected="true">Creează cont</button>
+          <button class="account-mode" id="account-login-mode" type="button" role="tab" aria-selected="false">Conectare</button>
+        </div>
+        <form id="account-form">
+          <label class="account-field" id="account-name-field">
+            <span>Numele tău</span>
+            <input id="account-name" name="name" type="text" autocomplete="name" required maxlength="60" />
+          </label>
+          <label class="account-field">
+            <span>Email</span>
+            <input id="account-email" name="email" type="email" autocomplete="email" required maxlength="254" />
+          </label>
+          <label class="account-field">
+            <span>Parolă</span>
+            <input id="account-password" name="password" type="password" autocomplete="new-password" required minlength="8" />
+          </label>
+          <label class="account-field" id="account-confirm-field">
+            <span>Confirmă parola</span>
+            <input id="account-confirm-password" name="confirm-password" type="password" autocomplete="new-password" required minlength="8" />
+          </label>
+          <p class="account-status hidden" id="account-status" role="status" aria-live="polite"></p>
+          <button class="button button-primary account-submit" id="account-submit" type="submit">Creează cont gratuit</button>
+        </form>
+        <div class="account-signed-in hidden" id="account-signed-in">
+          <p id="account-welcome"></p>
+          <button class="button button-outline account-logout" id="account-logout" type="button">Deconectare</button>
+        </div>
+      </div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"><i data-lucide="circle-check"></i><span></span></div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="Frontend1.js"></script>
+  </body>
+</html>
