@@ -1462,6 +1462,89 @@ window.addEventListener("resize", () => {
   if (!tooltip.classList.contains("hidden") && activePlanet) showPlanetTooltip(activePlanet);
 });
 
+const pageNavigation = document.querySelector(".main-nav");
+const organizationPage = document.querySelector("#organizatii");
+const pageRoot = document.documentElement;
+let organizationExitTimer;
+let pendingSectionHash = "#oportunitati";
+
+function getPageTarget(hash) {
+  return hash.startsWith("#") ? document.getElementById(hash.slice(1)) : null;
+}
+
+function setCurrentNavigation(hash) {
+  pageNavigation.querySelectorAll(".nav-link").forEach((link) => {
+    const isCurrent = link.getAttribute("href") === hash;
+    link.classList.toggle("active", isCurrent);
+    if (isCurrent) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+function showOrganizationPage() {
+  window.clearTimeout(organizationExitTimer);
+  pageRoot.classList.remove("organization-leaving");
+  if (!pageRoot.classList.contains("organization-view")) {
+    pageRoot.classList.add("organization-view");
+    organizationPage.focus({ preventScroll: true });
+  }
+  setCurrentNavigation("#organizatii");
+}
+
+function finishOrganizationExit() {
+  pageRoot.classList.remove("organization-view", "organization-leaving");
+  getPageTarget(pendingSectionHash)?.scrollIntoView({
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+    block: "start",
+  });
+}
+
+function returnToSection(hash) {
+  pendingSectionHash = hash;
+  setCurrentNavigation(hash);
+  if (!pageRoot.classList.contains("organization-view") && !pageRoot.classList.contains("organization-leaving")) {
+    getPageTarget(hash)?.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+      block: "start",
+    });
+    return;
+  }
+  if (pageRoot.classList.contains("organization-leaving")) return;
+
+  pageRoot.classList.remove("organization-view");
+  pageRoot.classList.add("organization-leaving");
+  organizationExitTimer = window.setTimeout(finishOrganizationExit, 550);
+}
+
+function navigateToSection(hash) {
+  if (window.location.hash !== hash) window.history.pushState(null, "", hash);
+  if (hash === "#organizatii") showOrganizationPage();
+  else returnToSection(hash);
+}
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || !getPageTarget(link.getAttribute("href"))) return;
+  const isNavigationLink = link.matches(".nav-link");
+  const organizationViewIsOpen = pageRoot.classList.contains("organization-view")
+    || pageRoot.classList.contains("organization-leaving");
+  if (!isNavigationLink && !organizationViewIsOpen) return;
+
+  event.preventDefault();
+  navigateToSection(link.getAttribute("href"));
+});
+
+function syncPageFromLocation() {
+  const hash = window.location.hash || "#acasa";
+  if (hash === "#organizatii") showOrganizationPage();
+  else if (getPageTarget(hash)) returnToSection(hash);
+}
+
+window.addEventListener("popstate", syncPageFromLocation);
+window.addEventListener("hashchange", syncPageFromLocation);
+if (window.location.hash === "#organizatii") showOrganizationPage();
+else setCurrentNavigation(window.location.hash || "#oportunitati");
+
 renderOpportunities();
 refreshLocalRadar();
 window.setInterval(refreshLocalRadar, 60_000);

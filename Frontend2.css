@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  --page-header-offset: 108px;
   --ink: #17213d;
   --muted: #82899c;
   --violet: #6558e8;
@@ -302,6 +303,27 @@ button { cursor: pointer; }
 .result-content { display: flex; align-items: center; gap: 12px; }.result-score { width: 47px; height: 47px; flex: 0 0 47px; display: grid; place-items: center; border: 3px solid #cceedd; border-radius: 50%; color: #188563; background: #f3fcf7; font: 700 10px "Space Grotesk", sans-serif; text-transform: uppercase; }.result-copy { color: #727a8f; font-size: 9px; line-height: 1.55; }.result-copy strong { display: block; margin-bottom: 2px; color: #2e765e; font-size: 10px; }.privacy-note { display: flex; justify-content: center; align-items: center; gap: 5px; margin-top: 10px; color: #a3a8b4; font-size: 8px; }.privacy-note svg { width: 11px; height: 11px; color: #7eb29c; }
 
 .organizations-section { max-width: 100%; padding-top: 66px; padding-bottom: 66px; position: relative; overflow: hidden; background: #222945; }
+html.organization-view, html.organization-leaving { overflow: hidden; }
+.home-page, .final-cta { transition: transform .48s cubic-bezier(.22, .75, .25, 1); }
+html.organization-view .home-page, html.organization-view .final-cta {
+  transform: translateX(-100vw);
+  pointer-events: none;
+}
+html.organization-view .organizations-section, html.organization-leaving .organizations-section {
+  position: fixed;
+  inset: var(--page-header-offset) 0 0;
+  z-index: 19;
+  max-width: none;
+  min-height: calc(100vh - var(--page-header-offset));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+html.organization-view .organizations-section { animation: organization-page-enter .48s cubic-bezier(.22, .75, .25, 1) both; }
+html.organization-leaving .organizations-section { animation: organization-page-leave .48s cubic-bezier(.22, .75, .25, 1) both; }
+@keyframes organization-page-enter { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes organization-page-leave { from { transform: translateX(0); } to { transform: translateX(100%); } }
 .org-content { max-width: 1082px; margin: auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr minmax(330px, 395px); gap: 90px; align-items: center; }
 .org-decoration { position: absolute; border: 1px solid rgb(171 163 255 / 10%); border-radius: 50%; }.decor-one { width: 520px; height: 520px; right: -25px; top: -215px; }.decor-two { width: 440px; height: 440px; right: 14px; top: -176px; }
 .org-eyebrow { color: #a69ef2; }.org-eyebrow span { color: #c4bfff; }
@@ -350,6 +372,7 @@ button { cursor: pointer; }
   .match-section { gap: 42px; }.org-content { gap: 45px; margin-right: 24px; margin-left: 24px; }
 }
 @media (max-width: 720px) {
+  :root { --page-header-offset: 95px; }
   .planet-tooltip { width: min(260px, calc(100vw - 44px)); padding: 13px 14px; }
   .planet-tooltip-type { font-size: 10px; }
   .planet-tooltip-title { font-size: 16px; }
