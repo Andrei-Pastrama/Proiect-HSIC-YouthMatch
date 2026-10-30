@@ -523,6 +523,65 @@ let currentLanguage = "ro";
 let activeHeroOpportunityId = 3;
 const originalTextNodes = new WeakMap();
 const originalAttributes = new WeakMap();
+const cvTranslations = {
+  en: {
+    "CV-ul tău Europass": "Your Europass CV", "Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.": "Complete your profile and add experiences you have already had. Your data stays in this browser.",
+    "Creează CV Europass": "Create Europass CV",
+    "Telefon (opțional)": "Phone (optional)", "Localitate și țară (opțional)": "City and country (optional)", "Educație (opțional)": "Education (optional)",
+    "Limbi cunoscute (opțional)": "Languages (optional)", "ex. Liceul ..., profil ...": "e.g. High school ..., track ...", "ex. Română (nativ), Engleză (B2)": "e.g. Romanian (native), English (B2)",
+    "Salvează profilul": "Save profile", "Experiențe și activități": "Experiences and activities", "Activitate YouthMatch": "YouthMatch activity",
+    "Alege activitatea": "Choose an activity", "Rolul tău": "Your role", "ex. Voluntar, participant, organizator": "e.g. Volunteer, participant, organizer",
+    "Perioadă": "Period", "ex. Iunie–august 2025": "e.g. June–August 2025", "Ce ai făcut și ce ai învățat": "What you did and learned",
+    "Competențe dobândite (opțional)": "Skills gained (optional)", "ex. lucru în echipă, comunicare": "e.g. teamwork, communication", "Adaugă experiența": "Add experience",
+    "Descarcă CV-ul Europass (PDF)": "Download Europass CV (PDF)", "Se va deschide fereastra de imprimare; alege „Salvează ca PDF”.": "The print window will open; choose “Save as PDF”.",
+    "Șterge": "Remove", "Nu ai adăugat încă experiențe.": "You have not added any experiences yet.", "Nu s-a putut salva profilul CV în acest browser.": "The CV profile could not be saved in this browser.",
+    "Profilul CV a fost salvat.": "CV profile saved.", "Experiența a fost adăugată în CV.": "Experience added to your CV.",
+    "CV-ul nu s-a putut genera. Verifică datele profilului și încearcă din nou.": "The CV could not be generated. Check your profile details and try again.",
+    "Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou.": "The print window could not be opened. Allow pop-ups and try again.",
+    "Educație și formare": "Education and training", "Experiență profesională": "Work experience", "Competențe personale": "Personal skills",
+    "Informații personale": "Personal information", "Limbi materne": "Mother tongue(s)", "Alte limbi": "Other languages",
+    "Competențe dobândite prin activități": "Skills gained through activities", "Activitate YouthMatch": "YouthMatch activity",
+    "CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "CV created with YouthMatch in Europass format. Review and complete the information before using it.",
+  },
+  fr: {
+    "CV-ul tău Europass": "Votre CV Europass", "Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.": "Complétez votre profil et ajoutez les expériences que vous avez déjà vécues. Vos données restent dans ce navigateur.",
+    "Creează CV Europass": "Créer un CV Europass",
+    "Telefon (opțional)": "Téléphone (facultatif)", "Localitate și țară (opțional)": "Ville et pays (facultatif)", "Educație (opțional)": "Formation (facultatif)",
+    "Limbi cunoscute (opțional)": "Langues (facultatif)", "ex. Liceul ..., profil ...": "ex. Lycée ..., filière ...", "ex. Română (nativ), Engleză (B2)": "ex. Roumain (langue maternelle), anglais (B2)",
+    "Salvează profilul": "Enregistrer le profil", "Experiențe și activități": "Expériences et activités", "Activitate YouthMatch": "Activité YouthMatch",
+    "Alege activitatea": "Choisir une activité", "Rolul tău": "Votre rôle", "ex. Voluntar, participant, organizator": "ex. Bénévole, participant, organisateur",
+    "Perioadă": "Période", "ex. Iunie–august 2025": "ex. Juin–août 2025", "Ce ai făcut și ce ai învățat": "Vos activités et acquis",
+    "Competențe dobândite (opțional)": "Compétences acquises (facultatif)", "ex. lucru în echipă, comunicare": "ex. travail en équipe, communication", "Adaugă experiența": "Ajouter l’expérience",
+    "Descarcă CV-ul Europass (PDF)": "Télécharger le CV Europass (PDF)", "Se va deschide fereastra de imprimare; alege „Salvează ca PDF”.": "La fenêtre d’impression s’ouvrira ; choisissez « Enregistrer au format PDF ».",
+    "Șterge": "Supprimer", "Nu ai adăugat încă experiențe.": "Vous n’avez pas encore ajouté d’expérience.", "Nu s-a putut salva profilul CV în acest browser.": "Impossible d’enregistrer le profil CV dans ce navigateur.",
+    "Profilul CV a fost salvat.": "Profil CV enregistré.", "Experiența a fost adăugată în CV.": "Expérience ajoutée au CV.",
+    "CV-ul nu s-a putut genera. Verifică datele profilului și încearcă din nou.": "Impossible de générer le CV. Vérifiez les informations du profil et réessayez.",
+    "Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou.": "Impossible d’ouvrir la fenêtre d’impression. Autorisez les fenêtres contextuelles et réessayez.",
+    "Educație și formare": "Éducation et formation", "Experiență profesională": "Expérience professionnelle", "Competențe personale": "Compétences personnelles",
+    "Informații personale": "Informations personnelles", "Limbi materne": "Langue(s) maternelle(s)", "Alte limbi": "Autres langues",
+    "Competențe dobândite prin activități": "Compétences acquises lors d’activités", "Activitate YouthMatch": "Activité YouthMatch",
+    "CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "CV créé avec YouthMatch au format Europass. Vérifiez et complétez les informations avant de l’utiliser.",
+  },
+  de: {
+    "CV-ul tău Europass": "Dein Europass-Lebenslauf", "Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.": "Vervollständige dein Profil und füge bereits gemachte Erfahrungen hinzu. Deine Daten bleiben in diesem Browser.",
+    "Creează CV Europass": "Europass-Lebenslauf erstellen",
+    "Telefon (opțional)": "Telefon (optional)", "Localitate și țară (opțional)": "Ort und Land (optional)", "Educație (opțional)": "Bildung (optional)",
+    "Limbi cunoscute (opțional)": "Sprachen (optional)", "ex. Liceul ..., profil ...": "z. B. Gymnasium ..., Schwerpunkt ...", "ex. Română (nativ), Engleză (B2)": "z. B. Rumänisch (Muttersprache), Englisch (B2)",
+    "Salvează profilul": "Profil speichern", "Experiențe și activități": "Erfahrungen und Aktivitäten", "Activitate YouthMatch": "YouthMatch-Aktivität",
+    "Alege activitatea": "Aktivität auswählen", "Rolul tău": "Deine Rolle", "ex. Voluntar, participant, organizator": "z. B. Freiwillige:r, Teilnehmer:in, Organisator:in",
+    "Perioadă": "Zeitraum", "ex. Iunie–august 2025": "z. B. Juni–August 2025", "Ce ai făcut și ce ai învățat": "Was du getan und gelernt hast",
+    "Competențe dobândite (opțional)": "Erworbene Kompetenzen (optional)", "ex. lucru în echipă, comunicare": "z. B. Teamarbeit, Kommunikation", "Adaugă experiența": "Erfahrung hinzufügen",
+    "Descarcă CV-ul Europass (PDF)": "Europass-Lebenslauf herunterladen (PDF)", "Se va deschide fereastra de imprimare; alege „Salvează ca PDF”.": "Das Druckfenster wird geöffnet; wähle „Als PDF speichern“.",
+    "Șterge": "Entfernen", "Nu ai adăugat încă experiențe.": "Du hast noch keine Erfahrungen hinzugefügt.", "Nu s-a putut salva profilul CV în acest browser.": "Das Lebenslaufprofil konnte in diesem Browser nicht gespeichert werden.",
+    "Profilul CV a fost salvat.": "Lebenslaufprofil gespeichert.", "Experiența a fost adăugată în CV.": "Erfahrung zum Lebenslauf hinzugefügt.",
+    "CV-ul nu s-a putut genera. Verifică datele profilului și încearcă din nou.": "Der Lebenslauf konnte nicht erstellt werden. Überprüfe dein Profil und versuche es erneut.",
+    "Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou.": "Das Druckfenster konnte nicht geöffnet werden. Erlaube Pop-ups und versuche es erneut.",
+    "Educație și formare": "Bildung und Ausbildung", "Experiență profesională": "Berufserfahrung", "Competențe personale": "Persönliche Kompetenzen",
+    "Informații personale": "Persönliche Informationen", "Limbi materne": "Muttersprache(n)", "Alte limbi": "Weitere Sprachen",
+    "Competențe dobândite prin activități": "Durch Aktivitäten erworbene Kompetenzen", "Activitate YouthMatch": "YouthMatch-Aktivität",
+    "CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "Lebenslauf im Europass-Format mit YouthMatch erstellt. Überprüfe und ergänze die Angaben vor der Verwendung.",
+  },
+};
 const planetDescriptions = {
   1: {
     ro: "Schimburi internaționale de învățare non-formală pentru tineri.",
@@ -575,7 +634,7 @@ const planetDescriptions = {
 };
 
 function translate(text) {
-  return translations[currentLanguage]?.[text] || text;
+  return translations[currentLanguage]?.[text] || cvTranslations[currentLanguage]?.[text] || text;
 }
 
 function renderPlanets() {
@@ -1084,6 +1143,7 @@ function showToast(message) {
 
 const localAccountsKey = "youthmatch.local-accounts.v1";
 const localAccountSessionKey = "youthmatch.local-session.v1";
+const localCvProfilePrefix = "youthmatch.cv-profile.v1.";
 const accountDialog = document.querySelector("#account-dialog");
 const accountForm = document.querySelector("#account-form");
 const accountStatus = document.querySelector("#account-status");
@@ -1106,6 +1166,61 @@ function getSignedInAccount() {
   const email = window.sessionStorage.getItem(localAccountSessionKey);
   if (!email) return null;
   return readLocalAccounts().find((account) => account.email === email) || null;
+}
+
+function readCvProfile(email) {
+  const storedProfile = window.localStorage.getItem(`${localCvProfilePrefix}${encodeURIComponent(email)}`);
+  if (!storedProfile) {
+    return { phone: "", location: "", education: "", languages: "", experiences: [] };
+  }
+
+  const profile = JSON.parse(storedProfile);
+  const stringFields = ["phone", "location", "education", "languages"];
+  if (!profile || stringFields.some((field) => typeof profile[field] !== "string")
+    || !Array.isArray(profile.experiences)
+    || profile.experiences.some((experience) =>
+      !experience || typeof experience.id !== "string" || !Number.isInteger(experience.activityId)
+      || ["role", "period", "description", "skills"].some((field) => typeof experience[field] !== "string"))) {
+    throw new Error("Stored CV profile data has an invalid format.");
+  }
+  return profile;
+}
+
+function saveCvProfile(email, profile) {
+  window.localStorage.setItem(`${localCvProfilePrefix}${encodeURIComponent(email)}`, JSON.stringify(profile));
+}
+
+function renderCvExperiences(profile) {
+  const list = document.querySelector("#cv-experience-list");
+  if (!profile.experiences.length) {
+    list.innerHTML = `<li class="cv-empty">${translate("Nu ai adăugat încă experiențe.")}</li>`;
+    return;
+  }
+  list.innerHTML = profile.experiences.map((experience) => {
+    const activity = opportunities.find((item) => item.id === experience.activityId);
+    return `
+      <li class="cv-experience-item">
+        <button type="button" data-cv-remove="${escapeHtml(experience.id)}" aria-label="${translate("Șterge")}">× ${translate("Șterge")}</button>
+        <strong>${escapeHtml(translate(activity?.title || "Activitate YouthMatch"))}</strong>
+        <span>${escapeHtml(experience.role)} · ${escapeHtml(experience.period)}</span>
+        <p>${escapeHtml(experience.description)}</p>
+        ${experience.skills ? `<span>${escapeHtml(experience.skills)}</span>` : ""}
+      </li>`;
+  }).join("");
+}
+
+function renderCvBuilder(account) {
+  const activitySelect = document.querySelector("#cv-activity");
+  activitySelect.innerHTML = `<option value="">${translate("Alege activitatea")}</option>${opportunities.map((activity) =>
+    `<option value="${activity.id}">${escapeHtml(translate(activity.title))}</option>`).join("")}`;
+
+  const profile = readCvProfile(account.email);
+  document.querySelector("#cv-phone").value = profile.phone;
+  document.querySelector("#cv-location").value = profile.location;
+  document.querySelector("#cv-education").value = profile.education;
+  document.querySelector("#cv-languages").value = profile.languages;
+  renderCvExperiences(profile);
+  document.querySelector("#cv-profile-status").classList.add("hidden");
 }
 
 function updateAccountCard() {
@@ -1166,6 +1281,7 @@ function renderAccountDialog() {
   if (account) {
     document.querySelector("#account-dialog-title").textContent = translate("Contul meu");
     document.querySelector("#account-welcome").textContent = `${translate("Bun venit,")} ${account.name}`;
+    renderCvBuilder(account);
   } else {
     setAccountMode(accountMode);
   }
@@ -1206,6 +1322,16 @@ function openAccountDialog() {
 
 document.querySelector("#account-open").addEventListener("click", openAccountDialog);
 document.querySelector("#account-open-header").addEventListener("click", openAccountDialog);
+document.querySelector("#cv-open").addEventListener("click", () => {
+  openAccountDialog();
+  if (!document.querySelector("#account-signed-in").classList.contains("hidden")) {
+    window.requestAnimationFrame(() => {
+      const cvHeading = document.querySelector("#cv-builder-title");
+      cvHeading.scrollIntoView({ behavior: "smooth", block: "start" });
+      cvHeading.focus({ preventScroll: true });
+    });
+  }
+});
 document.querySelector("#account-close").addEventListener("click", () => accountDialog.close());
 accountDialog.addEventListener("click", (event) => {
   if (event.target === accountDialog) accountDialog.close();
@@ -1224,6 +1350,147 @@ document.querySelector("#account-logout").addEventListener("click", () => {
   setAccountMode("register");
   updateAccountCard();
   renderAccountDialog();
+});
+
+function getCvProfileFormValues(profile) {
+  return {
+    ...profile,
+    phone: document.querySelector("#cv-phone").value.trim(),
+    location: document.querySelector("#cv-location").value.trim(),
+    education: document.querySelector("#cv-education").value.trim(),
+    languages: document.querySelector("#cv-languages").value.trim(),
+  };
+}
+
+document.querySelector("#cv-profile-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const status = document.querySelector("#cv-profile-status");
+  try {
+    const account = getSignedInAccount();
+    if (!account) return;
+    saveCvProfile(account.email, getCvProfileFormValues(readCvProfile(account.email)));
+    status.textContent = translate("Profilul CV a fost salvat.");
+    status.classList.remove("hidden");
+    status.classList.add("is-success");
+  } catch (error) {
+    console.error("Could not save the local CV profile:", error);
+    status.textContent = translate("Nu s-a putut salva profilul CV în acest browser.");
+    status.classList.remove("hidden", "is-success");
+  }
+});
+
+document.querySelector("#cv-experience-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.currentTarget);
+  const activityId = Number(formData.get("activity"));
+  const activity = opportunities.find((item) => item.id === activityId);
+  if (!activity) return;
+
+  try {
+    const account = getSignedInAccount();
+    if (!account) return;
+    const profile = getCvProfileFormValues(readCvProfile(account.email));
+    profile.experiences.push({
+      id: `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`,
+      activityId,
+      role: String(formData.get("role")).trim(),
+      period: String(formData.get("period")).trim(),
+      description: String(formData.get("description")).trim(),
+      skills: String(formData.get("skills")).trim(),
+    });
+    saveCvProfile(account.email, profile);
+    event.currentTarget.reset();
+    renderCvExperiences(profile);
+    document.querySelector("#cv-profile-status").classList.add("hidden");
+    showToast(translate("Experiența a fost adăugată în CV."));
+  } catch (error) {
+    console.error("Could not save the local CV experience:", error);
+    const status = document.querySelector("#cv-profile-status");
+    status.textContent = translate("Nu s-a putut salva profilul CV în acest browser.");
+    status.classList.remove("hidden", "is-success");
+  }
+});
+
+document.querySelector("#cv-experience-list").addEventListener("click", (event) => {
+  const removeButton = event.target.closest("[data-cv-remove]");
+  if (!removeButton) return;
+  try {
+    const account = getSignedInAccount();
+    if (!account) return;
+    const profile = getCvProfileFormValues(readCvProfile(account.email));
+    profile.experiences = profile.experiences.filter((experience) => experience.id !== removeButton.dataset.cvRemove);
+    saveCvProfile(account.email, profile);
+    renderCvExperiences(profile);
+  } catch (error) {
+    console.error("Could not remove the local CV experience:", error);
+    const status = document.querySelector("#cv-profile-status");
+    status.textContent = translate("Nu s-a putut salva profilul CV în acest browser.");
+    status.classList.remove("hidden", "is-success");
+  }
+});
+
+document.querySelector("#cv-export").addEventListener("click", () => {
+  let printWindow;
+  try {
+    const account = getSignedInAccount();
+    if (!account) return;
+    const profile = getCvProfileFormValues(readCvProfile(account.email));
+    saveCvProfile(account.email, profile);
+    printWindow = window.open("", "_blank");
+    if (!printWindow) {
+      showToast(translate("Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou."));
+      return;
+    }
+
+    const contactDetails = [account.email, profile.phone, profile.location].filter(Boolean)
+      .map((detail) => `<li>${escapeHtml(detail)}</li>`).join("");
+    const experiences = profile.experiences.map((experience) => {
+      const activity = opportunities.find((item) => item.id === experience.activityId);
+      return `<article class="experience">
+        <div class="experience-heading"><h3>${escapeHtml(experience.role)} · ${escapeHtml(translate(activity?.title || "Activitate YouthMatch"))}</h3><span>${escapeHtml(experience.period)}</span></div>
+        <p class="organization">${escapeHtml(activity?.organization || "")}</p>
+        <p class="description">${escapeHtml(experience.description)}</p>
+        ${experience.skills ? `<p class="skills"><strong>${escapeHtml(translate("Competențe dobândite prin activități"))}:</strong> ${escapeHtml(experience.skills)}</p>` : ""}
+      </article>`;
+    }).join("");
+    const sections = [
+      profile.education && `<section><h2>${escapeHtml(translate("Educație și formare"))}</h2><p class="preserve-lines">${escapeHtml(profile.education)}</p></section>`,
+      experiences && `<section><h2>${escapeHtml(translate("Experiență profesională"))}</h2>${experiences}</section>`,
+      profile.languages && `<section><h2>${escapeHtml(translate("Competențe personale"))}</h2><p><strong>${escapeHtml(translate("Alte limbi"))}:</strong> ${escapeHtml(profile.languages)}</p></section>`,
+    ].filter(Boolean).join("");
+    const cvHtml = `<!doctype html>
+      <html lang="${currentLanguage}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>${escapeHtml(translate("CV-ul tău Europass"))} - ${escapeHtml(account.name)}</title>
+      <style>
+        *{box-sizing:border-box}body{max-width:900px;margin:0 auto;padding:42px 54px;color:#26344a;font:14px/1.55 Arial,sans-serif}
+        .europass-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:5px solid #164194}
+        .europass-logo{color:#164194;font-size:23px;font-weight:700;letter-spacing:-1px}.europass-logo span{display:block;color:#526174;font-size:11px;font-weight:400;letter-spacing:0}
+        .europass-label{color:#164194;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+        h1{margin:28px 0 4px;color:#17213d;font-size:30px}.subtitle{margin:0 0 24px;color:#68758a}
+        .columns{display:grid;grid-template-columns:220px 1fr;gap:34px}.sidebar{padding-right:20px;border-right:1px solid #dfe4ec}
+        section{margin:0 0 24px;break-inside:avoid}h2{margin:0 0 12px;padding-bottom:6px;border-bottom:1px solid #dfe4ec;color:#164194;font-size:14px;text-transform:uppercase;letter-spacing:.06em}
+        h3{margin:0;color:#26344a;font-size:14px}.experience{margin:0 0 18px;break-inside:avoid}.experience-heading{display:flex;justify-content:space-between;gap:12px}.experience-heading span{flex:none;color:#68758a;font-size:12px}
+        p{margin:6px 0}.organization,.skills{color:#526174;font-size:12px}.description,.preserve-lines{white-space:pre-line}.contact{margin:0;padding:0;list-style:none;overflow-wrap:anywhere}.contact li{margin:5px 0}
+        .notice{margin-top:30px;padding-top:10px;border-top:1px solid #dfe4ec;color:#778196;font-size:10px}
+        @media print{body{padding:0 10mm}.columns{grid-template-columns:190px 1fr;gap:24px}a{color:inherit;text-decoration:none}}
+        @media(max-width:650px){body{padding:24px}.columns{grid-template-columns:1fr}.sidebar{padding:0 0 18px;border:0;border-bottom:1px solid #dfe4ec}.experience-heading{display:block}}
+      </style></head><body>
+      <header class="europass-head"><div class="europass-logo">europass<span>European Union</span></div><div class="europass-label">Curriculum Vitae</div></header>
+      <h1>${escapeHtml(account.name)}</h1><p class="subtitle">${escapeHtml(translate("CV-ul tău Europass"))}</p>
+      <div class="columns"><aside class="sidebar"><section><h2>${escapeHtml(translate("Informații personale"))}</h2><ul class="contact">${contactDetails}</ul></section></aside>
+      <main>${sections}</main></div>
+      <p class="notice">${escapeHtml(translate("CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi."))}</p>
+      </body></html>`;
+    printWindow.document.open();
+    printWindow.document.write(cvHtml);
+    printWindow.document.close();
+    printWindow.focus();
+    window.setTimeout(() => printWindow.print(), 300);
+  } catch (error) {
+    console.error("Could not generate the local Europass CV:", error);
+    printWindow?.close();
+    showToast(translate("CV-ul nu s-a putut genera. Verifică datele profilului și încearcă din nou."));
+  }
 });
 
 accountForm.addEventListener("submit", async (event) => {

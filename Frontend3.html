@@ -86,6 +86,9 @@
               <a href="#oportunitati" class="button button-primary">
                 Descoperă oportunități <i data-lucide="arrow-down-right"></i>
               </a>
+              <button class="button button-outline cv-hero-button" id="cv-open" type="button" aria-haspopup="dialog" aria-controls="account-dialog">
+                <i data-lucide="file-user" aria-hidden="true"></i> Creează CV Europass
+              </button>
               <div class="social-proof">
                 <span class="account-proof-icon"><i data-lucide="circle-check"></i></span>
                 <span><strong>Profil personalizat</strong> · experiențe potrivite ție</span>
@@ -278,6 +281,35 @@
         </form>
         <div class="account-signed-in hidden" id="account-signed-in">
           <p id="account-welcome"></p>
+          <section class="cv-builder" aria-labelledby="cv-builder-title">
+            <div class="cv-builder-heading">
+              <div><span class="simulator-kicker">YOUTHMATCH</span><h3 id="cv-builder-title" tabindex="-1">CV-ul tău Europass</h3></div>
+              <i data-lucide="file-user" aria-hidden="true"></i>
+            </div>
+            <p class="cv-builder-note">Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.</p>
+            <form id="cv-profile-form">
+              <label class="account-field"><span>Telefon (opțional)</span><input id="cv-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" /></label>
+              <label class="account-field"><span>Localitate și țară (opțional)</span><input id="cv-location" name="location" type="text" autocomplete="address-level2" maxlength="100" /></label>
+              <label class="account-field"><span>Educație (opțional)</span><textarea id="cv-education" name="education" rows="2" maxlength="500" placeholder="ex. Liceul ..., profil ..."></textarea></label>
+              <label class="account-field"><span>Limbi cunoscute (opțional)</span><input id="cv-languages" name="languages" type="text" maxlength="200" placeholder="ex. Română (nativ), Engleză (B2)" /></label>
+              <button class="button button-outline cv-save" type="submit">Salvează profilul</button>
+              <p class="cv-status hidden" id="cv-profile-status" role="status" aria-live="polite"></p>
+            </form>
+            <div class="cv-experience-section">
+              <h4>Experiențe și activități</h4>
+              <form id="cv-experience-form">
+                <label class="account-field"><span>Activitate YouthMatch</span><select id="cv-activity" name="activity" required><option value="">Alege activitatea</option></select></label>
+                <label class="account-field"><span>Rolul tău</span><input id="cv-role" name="role" type="text" required maxlength="100" placeholder="ex. Voluntar, participant, organizator" /></label>
+                <label class="account-field"><span>Perioadă</span><input id="cv-period" name="period" type="text" required maxlength="80" placeholder="ex. Iunie–august 2025" /></label>
+                <label class="account-field"><span>Ce ai făcut și ce ai învățat</span><textarea id="cv-description" name="description" rows="3" required maxlength="1000"></textarea></label>
+                <label class="account-field"><span>Competențe dobândite (opțional)</span><input id="cv-skills" name="skills" type="text" maxlength="250" placeholder="ex. lucru în echipă, comunicare" /></label>
+                <button class="button button-outline cv-save" type="submit">Adaugă experiența</button>
+              </form>
+              <ul class="cv-experience-list" id="cv-experience-list"></ul>
+            </div>
+            <button class="button button-primary cv-export" id="cv-export" type="button"><i data-lucide="printer"></i> Descarcă CV-ul Europass (PDF)</button>
+            <p class="cv-builder-note">Se va deschide fereastra de imprimare; alege „Salvează ca PDF”.</p>
+          </section>
           <button class="button button-outline account-logout" id="account-logout" type="button">Deconectare</button>
         </div>
       </div>
