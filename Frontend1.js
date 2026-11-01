@@ -86,7 +86,7 @@ const approvedActivityDomains = {
 
 const translations = {
   en: {
-    "YouthMatch MVP · Găsește-ți următoarea experiență": "YouthMatch MVP · Find your next experience",
+    "OpenPath MVP · Găsește-ți următoarea experiență": "OpenPath MVP · Find your next experience",
     "Explorează oportunități": "Explore opportunities", "Găsește o idee": "Find an idea",
     "Pentru organizații": "For organizations",
     "MAI PUȚIN SCROLL. MAI MULTE EXPERIENȚE.": "LESS SCROLLING. MORE EXPERIENCES.",
@@ -96,7 +96,7 @@ const translations = {
     "Descoperă oportunități": "Discover opportunities", "Profil personalizat": "Personalized profile",
     "· experiențe potrivite ție": "· experiences picked for you", "gratuit": "free", "Gratuit": "Free",
     "Creează cont gratuit": "Create a free account", "Salvează-ți profilul și găsește oportunități": "Save your profile and find opportunities",
-    "Creează cont YouthMatch": "Create your YouthMatch account", "Conectează-te la YouthMatch": "Sign in to YouthMatch",
+    "Creează cont OpenPath": "Create your OpenPath account", "Conectează-te la OpenPath": "Sign in to OpenPath",
     "Demo local: contul este disponibil doar în browserul acestui dispozitiv; nu există server sau sincronizare.":
       "Local demo: your account is available only in this browser on this device; there is no server or sync.",
     "Creează cont": "Sign up", "Conectare": "Sign in", "Numele tău": "Your name", "Email": "Email",
@@ -130,11 +130,11 @@ const translations = {
     "Arată toate": "Show all", "Verifică oportunitatea": "View opportunity",
     "Sursă oficială": "Official source", "Verifică mereu vârsta, perioada și înscrierea pe site-ul oficial.":
       "Always confirm age limits, dates and applications on the official website.",
-    "YouthMatch este un prototip.": "YouthMatch is a prototype.",
+    "OpenPath este un prototip.": "OpenPath is a prototype.",
     "NU ȘTII DE UNDE SĂ ÎNCEPI?": "NOT SURE WHERE TO START?",
     "Hai să găsim": "Let's find", "un punct de pornire.": "a place to start.",
-    "Alege ce-ți place și adaugă câteva lucruri la care te pricepi. YouthMatch îți arată o sugestie simplă — nu e test și nu decide în locul tău.":
-      "Choose what you enjoy and add a few skills. YouthMatch offers a simple suggestion — it's not a test and it won't decide for you.",
+    "Alege ce-ți place și adaugă câteva lucruri la care te pricepi. OpenPath îți arată o sugestie simplă — nu e test și nu decide în locul tău.":
+      "Choose what you enjoy and add a few skills. OpenPath offers a simple suggestion — it's not a test and it won't decide for you.",
     "Nu ai nevoie de experiență": "No experience needed", "Începe cu ce te interesează.": "Start with what interests you.",
     "Sugestii ghidate de interesele tale": "Suggestions guided by your interests",
     "Selectează domenii și află de unde să începi.": "Choose areas and find out where to start.",
@@ -159,13 +159,13 @@ const translations = {
     "Nu trebuie să ai tot planul. Alege doar ce vrei să explorezi.": "You don't need the whole plan. Just choose what you want to explore.",
     "Hai să vedem": "Let's explore", "Făcut cu": "Made with",
     "pentru elevii care vor să încerce ceva nou.": "for students who want to try something new.",
-    "YOUTHMATCH PENTRU ORGANIZAȚII": "YOUTHMATCH FOR ORGANIZATIONS",
+    "OPENPATH PENTRU ORGANIZAȚII": "OPENPATH FOR ORGANIZATIONS",
     "Previzualizează un anunț": "Preview a listing", "Cum se numește proiectul?": "What is the project called?",
     "ex. Atelier de design pentru liceeni": "e.g. Design workshop for high school students",
     "Pe cine cauți?": "Who are you looking for?", "Ce interese sau calități ar fi utile?": "What interests or qualities would be useful?",
     "Locuri": "Places", "Buget / participant": "Budget / participant", "ex. 500": "e.g. 500",
     "Previzualizează anunțul": "Preview listing", "Doar demo · datele nu se trimit sau salvează": "Demo only · data isn't sent or saved",
-    "Select language": "Select language", "YouthMatch — pagina principală": "YouthMatch — home page",
+    "Select language": "Select language", "OpenPath — pagina principală": "OpenPath — home page",
     "Ateliere și evenimente de programare": "Coding workshops and events",
     "Voluntariat individual ESC": "ESC individual volunteering",
     "Youth Participation Activities": "Youth Participation Activities",
@@ -204,8 +204,8 @@ const translations = {
     "Surse verificate": "Verified sources", "Pagina oficială a activității": "Official activity page",
     "Rezumatele AI sunt orientative; confirmă condițiile și datele la organizator.":
       "AI summaries are for guidance; confirm requirements and dates with the organizer.",
-    "YouthMatch nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.":
-      "YouthMatch does not create or delete accounts on organizer platforms. Do this directly with the relevant service.",
+    "OpenPath nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.":
+      "OpenPath does not create or delete accounts on organizer platforms. Do this directly with the relevant service.",
     "Cont / înscriere la organizator": "Organizer account / application",
     "Informații despre ștergerea contului": "Account deletion information",
     "Nu a fost găsit un link oficial verificat pentru crearea contului. Deschide pagina oficială a activității pentru instrucțiuni.":
@@ -230,7 +230,7 @@ const translations = {
       "This language is not supported by the AI summary service."
   },
   fr: {
-    "YouthMatch MVP · Găsește-ți următoarea experiență": "YouthMatch MVP · Trouvez votre prochaine expérience",
+    "OpenPath MVP · Găsește-ți următoarea experiență": "OpenPath MVP · Trouvez votre prochaine expérience",
     "Explorează oportunități": "Explorer les opportunités", "Găsește o idee": "Trouver une idée",
     "Pentru organizații": "Pour les organisations",
     "MAI PUȚIN SCROLL. MAI MULTE EXPERIENȚE.": "MOINS DE DÉFILEMENT. PLUS D’EXPÉRIENCES.",
@@ -240,7 +240,7 @@ const translations = {
     "Descoperă oportunități": "Découvrir les opportunités", "Profil personalizat": "Profil personnalisé",
     "· experiențe potrivite ție": "· des expériences pour vous", "gratuit": "gratuit", "Gratuit": "Gratuit",
     "Creează cont gratuit": "Créer un compte gratuit", "Salvează-ți profilul și găsește oportunități": "Enregistrez votre profil et trouvez des opportunités",
-    "Creează cont YouthMatch": "Créer un compte YouthMatch", "Conectează-te la YouthMatch": "Se connecter à YouthMatch",
+    "Creează cont OpenPath": "Créer un compte OpenPath", "Conectează-te la OpenPath": "Se connecter à OpenPath",
     "Demo local: contul este disponibil doar în browserul acestui dispozitiv; nu există server sau sincronizare.":
       "Démo locale : votre compte est disponible uniquement dans ce navigateur sur cet appareil ; aucun serveur ni synchronisation.",
     "Creează cont": "Créer un compte", "Conectare": "Connexion", "Numele tău": "Votre nom", "Email": "E-mail",
@@ -274,11 +274,11 @@ const translations = {
     "Arată toate": "Tout afficher", "Verifică oportunitatea": "Voir l’opportunité",
     "Sursă oficială": "Source officielle", "Verifică mereu vârsta, perioada și înscrierea pe site-ul oficial.":
       "Vérifiez toujours l’âge, les dates et les inscriptions sur le site officiel.",
-    "YouthMatch este un prototip.": "YouthMatch est un prototype.",
+    "OpenPath este un prototip.": "OpenPath est un prototype.",
     "NU ȘTII DE UNDE SĂ ÎNCEPI?": "VOUS NE SAVEZ PAS PAR OÙ COMMENCER ?",
     "Hai să găsim": "Trouvons", "un punct de pornire.": "un point de départ.",
-    "Alege ce-ți place și adaugă câteva lucruri la care te pricepi. YouthMatch îți arată o sugestie simplă — nu e test și nu decide în locul tău.":
-      "Choisissez ce qui vous plaît et ajoutez quelques compétences. YouthMatch vous propose une piste — ce n’est pas un test et le choix vous appartient.",
+    "Alege ce-ți place și adaugă câteva lucruri la care te pricepi. OpenPath îți arată o sugestie simplă — nu e test și nu decide în locul tău.":
+      "Choisissez ce qui vous plaît et ajoutez quelques compétences. OpenPath vous propose une piste — ce n’est pas un test et le choix vous appartient.",
     "Nu ai nevoie de experiență": "Aucune expérience requise", "Începe cu ce te interesează.": "Commencez par ce qui vous intéresse.",
     "Sugestii ghidate de interesele tale": "Des suggestions selon vos intérêts",
     "Selectează domenii și află de unde să începi.": "Choisissez des domaines pour savoir par où commencer.",
@@ -303,13 +303,13 @@ const translations = {
     "Nu trebuie să ai tot planul. Alege doar ce vrei să explorezi.": "Pas besoin d’avoir un plan complet. Choisissez simplement ce que vous voulez explorer.",
     "Hai să vedem": "C’est parti", "Făcut cu": "Fait avec",
     "pentru elevii care vor să încerce ceva nou.": "pour les élèves qui veulent tenter une nouvelle expérience.",
-    "YOUTHMATCH PENTRU ORGANIZAȚII": "YOUTHMATCH POUR LES ORGANISATIONS",
+    "OPENPATH PENTRU ORGANIZAȚII": "OPENPATH POUR LES ORGANISATIONS",
     "Previzualizează un anunț": "Prévisualiser une annonce", "Cum se numește proiectul?": "Comment s’appelle le projet ?",
     "ex. Atelier de design pentru liceeni": "ex. Atelier de design pour lycéens",
     "Pe cine cauți?": "Qui recherchez-vous ?", "Ce interese sau calități ar fi utile?": "Quels centres d’intérêt ou qualités seraient utiles ?",
     "Locuri": "Places", "Buget / participant": "Budget / participant", "ex. 500": "ex. 500",
     "Previzualizează anunțul": "Prévisualiser l’annonce", "Doar demo · datele nu se trimit sau salvează": "Démo uniquement · données ni envoyées ni enregistrées",
-    "Select language": "Choisir la langue", "YouthMatch — pagina principală": "YouthMatch — page d’accueil",
+    "Select language": "Choisir la langue", "OpenPath — pagina principală": "OpenPath — page d’accueil",
     "Ateliere și evenimente de programare": "Ateliers et événements de programmation",
     "Voluntariat individual ESC": "Bénévolat individuel CES",
     "Youth Participation Activities": "Activités de participation des jeunes",
@@ -348,8 +348,8 @@ const translations = {
     "Surse verificate": "Sources vérifiées", "Pagina oficială a activității": "Page officielle de l’activité",
     "Rezumatele AI sunt orientative; confirmă condițiile și datele la organizator.":
       "Les résumés IA sont indicatifs ; confirmez les conditions et les dates auprès de l’organisateur.",
-    "YouthMatch nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.":
-      "YouthMatch ne crée ni ne supprime les comptes des plateformes organisatrices. Ces actions doivent être effectuées auprès du service concerné.",
+    "OpenPath nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.":
+      "OpenPath ne crée ni ne supprime les comptes des plateformes organisatrices. Ces actions doivent être effectuées auprès du service concerné.",
     "Cont / înscriere la organizator": "Compte / inscription auprès de l’organisateur",
     "Informații despre ștergerea contului": "Informations sur la suppression du compte",
     "Nu a fost găsit un link oficial verificat pentru crearea contului. Deschide pagina oficială a activității pentru instrucțiuni.":
@@ -374,7 +374,7 @@ const translations = {
       "Cette langue n’est pas prise en charge par le service de résumé IA."
   },
   de: {
-    "YouthMatch MVP · Găsește-ți următoarea experiență": "YouthMatch MVP · Finde dein nächstes Erlebnis",
+    "OpenPath MVP · Găsește-ți următoarea experiență": "OpenPath MVP · Finde dein nächstes Erlebnis",
     "Explorează oportunități": "Möglichkeiten entdecken", "Găsește o idee": "Idee finden",
     "Pentru organizații": "Für Organisationen",
     "MAI PUȚIN SCROLL. MAI MULTE EXPERIENȚE.": "WENIGER SCROLLEN. MEHR ERLEBEN.",
@@ -384,7 +384,7 @@ const translations = {
     "Descoperă oportunități": "Möglichkeiten entdecken", "Profil personalizat": "Persönliches Profil",
     "· experiențe potrivite ție": "· passende Erlebnisse für dich", "gratuit": "kostenlos", "Gratuit": "Kostenlos",
     "Creează cont gratuit": "Kostenloses Konto erstellen", "Salvează-ți profilul și găsește oportunități": "Speichere dein Profil und entdecke Möglichkeiten",
-    "Creează cont YouthMatch": "YouthMatch-Konto erstellen", "Conectează-te la YouthMatch": "Bei YouthMatch anmelden",
+    "Creează cont OpenPath": "OpenPath-Konto erstellen", "Conectează-te la OpenPath": "Bei OpenPath anmelden",
     "Demo local: contul este disponibil doar în browserul acestui dispozitiv; nu există server sau sincronizare.":
       "Lokale Demo: Dein Konto ist nur in diesem Browser auf diesem Gerät verfügbar; es gibt keinen Server und keine Synchronisierung.",
     "Creează cont": "Konto erstellen", "Conectare": "Anmelden", "Numele tău": "Dein Name", "Email": "E-Mail",
@@ -418,11 +418,11 @@ const translations = {
     "Arată toate": "Alle anzeigen", "Verifică oportunitatea": "Angebot ansehen",
     "Sursă oficială": "Offizielle Quelle", "Verifică mereu vârsta, perioada și înscrierea pe site-ul oficial.":
       "Prüfe Alter, Zeitraum und Anmeldung immer auf der offiziellen Website.",
-    "YouthMatch este un prototip.": "YouthMatch ist ein Prototyp.",
+    "OpenPath este un prototip.": "OpenPath ist ein Prototyp.",
     "NU ȘTII DE UNDE SĂ ÎNCEPI?": "DU WEISST NICHT, WO DU ANFANGEN SOLLST?",
     "Hai să găsim": "Finden wir", "un punct de pornire.": "einen Anfang.",
-    "Alege ce-ți place și adaugă câteva lucruri la care te pricepi. YouthMatch îți arată o sugestie simplă — nu e test și nu decide în locul tău.":
-      "Wähle, was dir gefällt, und ergänze ein paar Fähigkeiten. YouthMatch macht einen einfachen Vorschlag — kein Test und keine Entscheidung für dich.",
+    "Alege ce-ți place și adaugă câteva lucruri la care te pricepi. OpenPath îți arată o sugestie simplă — nu e test și nu decide în locul tău.":
+      "Wähle, was dir gefällt, und ergänze ein paar Fähigkeiten. OpenPath macht einen einfachen Vorschlag — kein Test und keine Entscheidung für dich.",
     "Nu ai nevoie de experiență": "Keine Erfahrung nötig", "Începe cu ce te interesează.": "Beginne mit deinen Interessen.",
     "Sugestii ghidate de interesele tale": "Vorschläge nach deinen Interessen",
     "Selectează domenii și află de unde să începi.": "Wähle Themen und finde heraus, wo du anfangen kannst.",
@@ -447,13 +447,13 @@ const translations = {
     "Nu trebuie să ai tot planul. Alege doar ce vrei să explorezi.": "Du brauchst keinen vollständigen Plan. Wähle einfach, was du entdecken möchtest.",
     "Hai să vedem": "Los geht's", "Făcut cu": "Mit",
     "pentru elevii care vor să încerce ceva nou.": "für Schülerinnen und Schüler, die etwas Neues ausprobieren möchten.",
-    "YOUTHMATCH PENTRU ORGANIZAȚII": "YOUTHMATCH FÜR ORGANISATIONEN",
+    "OPENPATH PENTRU ORGANIZAȚII": "OPENPATH FÜR ORGANISATIONEN",
     "Previzualizează un anunț": "Eintrag ansehen", "Cum se numește proiectul?": "Wie heißt das Projekt?",
     "ex. Atelier de design pentru liceeni": "z. B. Design-Workshop für Schülerinnen und Schüler",
     "Pe cine cauți?": "Wen suchen Sie?", "Ce interese sau calități ar fi utile?": "Welche Interessen oder Eigenschaften wären hilfreich?",
     "Locuri": "Plätze", "Buget / participant": "Budget / Person", "ex. 500": "z. B. 500",
     "Previzualizează anunțul": "Eintrag ansehen", "Doar demo · datele nu se trimit sau salvează": "Nur Demo · Daten werden nicht gesendet oder gespeichert",
-    "Select language": "Sprache auswählen", "YouthMatch — pagina principală": "YouthMatch — Startseite",
+    "Select language": "Sprache auswählen", "OpenPath — pagina principală": "OpenPath — Startseite",
     "Ateliere și evenimente de programare": "Programmierworkshops und Veranstaltungen",
     "Voluntariat individual ESC": "Individueller ESK-Freiwilligendienst",
     "Youth Participation Activities": "Aktivitäten zur Jugendbeteiligung",
@@ -492,8 +492,8 @@ const translations = {
     "Surse verificate": "Geprüfte Quellen", "Pagina oficială a activității": "Offizielle Aktivitätsseite",
     "Rezumatele AI sunt orientative; confirmă condițiile și datele la organizator.":
       "KI-Zusammenfassungen dienen zur Orientierung; bestätige Bedingungen und Termine beim Veranstalter.",
-    "YouthMatch nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.":
-      "YouthMatch erstellt oder löscht keine Konten auf Veranstalter-Plattformen. Diese Aktionen müssen direkt beim jeweiligen Dienst erfolgen.",
+    "OpenPath nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.":
+      "OpenPath erstellt oder löscht keine Konten auf Veranstalter-Plattformen. Diese Aktionen müssen direkt beim jeweiligen Dienst erfolgen.",
     "Cont / înscriere la organizator": "Konto / Anmeldung beim Veranstalter",
     "Informații despre ștergerea contului": "Informationen zur Kontolöschung",
     "Nu a fost găsit un link oficial verificat pentru crearea contului. Deschide pagina oficială a activității pentru instrucțiuni.":
@@ -529,7 +529,7 @@ const cvTranslations = {
     "Creează CV Europass": "Create Europass CV",
     "Telefon (opțional)": "Phone (optional)", "Localitate și țară (opțional)": "City and country (optional)", "Educație (opțional)": "Education (optional)",
     "Limbi cunoscute (opțional)": "Languages (optional)", "ex. Liceul ..., profil ...": "e.g. High school ..., track ...", "ex. Română (nativ), Engleză (B2)": "e.g. Romanian (native), English (B2)",
-    "Salvează profilul": "Save profile", "Experiențe și activități": "Experiences and activities", "Activitate YouthMatch": "YouthMatch activity",
+    "Salvează profilul": "Save profile", "Experiențe și activități": "Experiences and activities", "Activitate OpenPath": "OpenPath activity",
     "Alege activitatea": "Choose an activity", "Rolul tău": "Your role", "ex. Voluntar, participant, organizator": "e.g. Volunteer, participant, organizer",
     "Perioadă": "Period", "ex. Iunie–august 2025": "e.g. June–August 2025", "Ce ai făcut și ce ai învățat": "What you did and learned",
     "Competențe dobândite (opțional)": "Skills gained (optional)", "ex. lucru în echipă, comunicare": "e.g. teamwork, communication", "Adaugă experiența": "Add experience",
@@ -540,15 +540,15 @@ const cvTranslations = {
     "Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou.": "The print window could not be opened. Allow pop-ups and try again.",
     "Educație și formare": "Education and training", "Experiență profesională": "Work experience", "Competențe personale": "Personal skills",
     "Informații personale": "Personal information", "Limbi materne": "Mother tongue(s)", "Alte limbi": "Other languages",
-    "Competențe dobândite prin activități": "Skills gained through activities", "Activitate YouthMatch": "YouthMatch activity",
-    "CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "CV created with YouthMatch in Europass format. Review and complete the information before using it.",
+    "Competențe dobândite prin activități": "Skills gained through activities", "Activitate OpenPath": "OpenPath activity",
+    "CV creat cu OpenPath în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "CV created with OpenPath in Europass format. Review and complete the information before using it.",
   },
   fr: {
     "CV-ul tău Europass": "Votre CV Europass", "Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.": "Complétez votre profil et ajoutez les expériences que vous avez déjà vécues. Vos données restent dans ce navigateur.",
     "Creează CV Europass": "Créer un CV Europass",
     "Telefon (opțional)": "Téléphone (facultatif)", "Localitate și țară (opțional)": "Ville et pays (facultatif)", "Educație (opțional)": "Formation (facultatif)",
     "Limbi cunoscute (opțional)": "Langues (facultatif)", "ex. Liceul ..., profil ...": "ex. Lycée ..., filière ...", "ex. Română (nativ), Engleză (B2)": "ex. Roumain (langue maternelle), anglais (B2)",
-    "Salvează profilul": "Enregistrer le profil", "Experiențe și activități": "Expériences et activités", "Activitate YouthMatch": "Activité YouthMatch",
+    "Salvează profilul": "Enregistrer le profil", "Experiențe și activități": "Expériences et activités", "Activitate OpenPath": "Activité OpenPath",
     "Alege activitatea": "Choisir une activité", "Rolul tău": "Votre rôle", "ex. Voluntar, participant, organizator": "ex. Bénévole, participant, organisateur",
     "Perioadă": "Période", "ex. Iunie–august 2025": "ex. Juin–août 2025", "Ce ai făcut și ce ai învățat": "Vos activités et acquis",
     "Competențe dobândite (opțional)": "Compétences acquises (facultatif)", "ex. lucru în echipă, comunicare": "ex. travail en équipe, communication", "Adaugă experiența": "Ajouter l’expérience",
@@ -559,15 +559,15 @@ const cvTranslations = {
     "Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou.": "Impossible d’ouvrir la fenêtre d’impression. Autorisez les fenêtres contextuelles et réessayez.",
     "Educație și formare": "Éducation et formation", "Experiență profesională": "Expérience professionnelle", "Competențe personale": "Compétences personnelles",
     "Informații personale": "Informations personnelles", "Limbi materne": "Langue(s) maternelle(s)", "Alte limbi": "Autres langues",
-    "Competențe dobândite prin activități": "Compétences acquises lors d’activités", "Activitate YouthMatch": "Activité YouthMatch",
-    "CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "CV créé avec YouthMatch au format Europass. Vérifiez et complétez les informations avant de l’utiliser.",
+    "Competențe dobândite prin activități": "Compétences acquises lors d’activités", "Activitate OpenPath": "Activité OpenPath",
+    "CV creat cu OpenPath în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "CV créé avec OpenPath au format Europass. Vérifiez et complétez les informations avant de l’utiliser.",
   },
   de: {
     "CV-ul tău Europass": "Dein Europass-Lebenslauf", "Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.": "Vervollständige dein Profil und füge bereits gemachte Erfahrungen hinzu. Deine Daten bleiben in diesem Browser.",
     "Creează CV Europass": "Europass-Lebenslauf erstellen",
     "Telefon (opțional)": "Telefon (optional)", "Localitate și țară (opțional)": "Ort und Land (optional)", "Educație (opțional)": "Bildung (optional)",
     "Limbi cunoscute (opțional)": "Sprachen (optional)", "ex. Liceul ..., profil ...": "z. B. Gymnasium ..., Schwerpunkt ...", "ex. Română (nativ), Engleză (B2)": "z. B. Rumänisch (Muttersprache), Englisch (B2)",
-    "Salvează profilul": "Profil speichern", "Experiențe și activități": "Erfahrungen und Aktivitäten", "Activitate YouthMatch": "YouthMatch-Aktivität",
+    "Salvează profilul": "Profil speichern", "Experiențe și activități": "Erfahrungen und Aktivitäten", "Activitate OpenPath": "OpenPath-Aktivität",
     "Alege activitatea": "Aktivität auswählen", "Rolul tău": "Deine Rolle", "ex. Voluntar, participant, organizator": "z. B. Freiwillige:r, Teilnehmer:in, Organisator:in",
     "Perioadă": "Zeitraum", "ex. Iunie–august 2025": "z. B. Juni–August 2025", "Ce ai făcut și ce ai învățat": "Was du getan und gelernt hast",
     "Competențe dobândite (opțional)": "Erworbene Kompetenzen (optional)", "ex. lucru în echipă, comunicare": "z. B. Teamarbeit, Kommunikation", "Adaugă experiența": "Erfahrung hinzufügen",
@@ -578,8 +578,8 @@ const cvTranslations = {
     "Nu s-a putut deschide fereastra de imprimare. Permite ferestrele pop-up și încearcă din nou.": "Das Druckfenster konnte nicht geöffnet werden. Erlaube Pop-ups und versuche es erneut.",
     "Educație și formare": "Bildung und Ausbildung", "Experiență profesională": "Berufserfahrung", "Competențe personale": "Persönliche Kompetenzen",
     "Informații personale": "Persönliche Informationen", "Limbi materne": "Muttersprache(n)", "Alte limbi": "Weitere Sprachen",
-    "Competențe dobândite prin activități": "Durch Aktivitäten erworbene Kompetenzen", "Activitate YouthMatch": "YouthMatch-Aktivität",
-    "CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "Lebenslauf im Europass-Format mit YouthMatch erstellt. Überprüfe und ergänze die Angaben vor der Verwendung.",
+    "Competențe dobândite prin activități": "Durch Aktivitäten erworbene Kompetenzen", "Activitate OpenPath": "OpenPath-Aktivität",
+    "CV creat cu OpenPath în format Europass. Verifică și completează informațiile înainte de a-l folosi.": "Lebenslauf im Europass-Format mit OpenPath erstellt. Überprüfe und ergänze die Angaben vor der Verwendung.",
   },
 };
 const planetDescriptions = {
@@ -871,7 +871,7 @@ function mountInteractiveComponents() {
 
   document.querySelector("#org-form-mount").innerHTML = `
     <form class="org-form-card" id="opportunity-form">
-      <div class="org-form-top"><div><span class="form-kicker">YOUTHMATCH PENTRU ORGANIZAȚII</span><h3>Previzualizează un anunț</h3></div><span class="form-spark"><i data-lucide="sparkles"></i></span></div>
+      <div class="org-form-top"><div><span class="form-kicker">OPENPATH PENTRU ORGANIZAȚII</span><h3>Previzualizează un anunț</h3></div><span class="form-spark"><i data-lucide="sparkles"></i></span></div>
       <label class="field-label" for="org-title">Cum se numește proiectul?</label>
       <input class="plain-input" id="org-title" name="title" type="text" placeholder="ex. Atelier de design pentru liceeni" required maxlength="70" />
       <label class="field-label" for="org-requirements">Pe cine cauți?</label>
@@ -1201,7 +1201,7 @@ function renderCvExperiences(profile) {
     return `
       <li class="cv-experience-item">
         <button type="button" data-cv-remove="${escapeHtml(experience.id)}" aria-label="${translate("Șterge")}">× ${translate("Șterge")}</button>
-        <strong>${escapeHtml(translate(activity?.title || "Activitate YouthMatch"))}</strong>
+        <strong>${escapeHtml(translate(activity?.title || "Activitate OpenPath"))}</strong>
         <span>${escapeHtml(experience.role)} · ${escapeHtml(experience.period)}</span>
         <p>${escapeHtml(experience.description)}</p>
         ${experience.skills ? `<span>${escapeHtml(experience.skills)}</span>` : ""}
@@ -1266,7 +1266,7 @@ function setAccountMode(mode) {
   document.querySelector("#account-confirm-password").required = isRegistering;
   document.querySelector("#account-password").autocomplete = isRegistering ? "new-password" : "current-password";
   document.querySelector("#account-dialog-title").textContent =
-    translate(isRegistering ? "Creează cont YouthMatch" : "Conectează-te la YouthMatch");
+    translate(isRegistering ? "Creează cont OpenPath" : "Conectează-te la OpenPath");
   document.querySelector("#account-submit").textContent =
     translate(isRegistering ? "Creează cont gratuit" : "Conectare");
   setAccountStatus();
@@ -1447,7 +1447,7 @@ document.querySelector("#cv-export").addEventListener("click", () => {
     const experiences = profile.experiences.map((experience) => {
       const activity = opportunities.find((item) => item.id === experience.activityId);
       return `<article class="experience">
-        <div class="experience-heading"><h3>${escapeHtml(experience.role)} · ${escapeHtml(translate(activity?.title || "Activitate YouthMatch"))}</h3><span>${escapeHtml(experience.period)}</span></div>
+        <div class="experience-heading"><h3>${escapeHtml(experience.role)} · ${escapeHtml(translate(activity?.title || "Activitate OpenPath"))}</h3><span>${escapeHtml(experience.period)}</span></div>
         <p class="organization">${escapeHtml(activity?.organization || "")}</p>
         <p class="description">${escapeHtml(experience.description)}</p>
         ${experience.skills ? `<p class="skills"><strong>${escapeHtml(translate("Competențe dobândite prin activități"))}:</strong> ${escapeHtml(experience.skills)}</p>` : ""}
@@ -1479,7 +1479,7 @@ document.querySelector("#cv-export").addEventListener("click", () => {
       <h1>${escapeHtml(account.name)}</h1><p class="subtitle">${escapeHtml(translate("CV-ul tău Europass"))}</p>
       <div class="columns"><aside class="sidebar"><section><h2>${escapeHtml(translate("Informații personale"))}</h2><ul class="contact">${contactDetails}</ul></section></aside>
       <main>${sections}</main></div>
-      <p class="notice">${escapeHtml(translate("CV creat cu YouthMatch în format Europass. Verifică și completează informațiile înainte de a-l folosi."))}</p>
+      <p class="notice">${escapeHtml(translate("CV creat cu OpenPath în format Europass. Verifică și completează informațiile înainte de a-l folosi."))}</p>
       </body></html>`;
     printWindow.document.open();
     printWindow.document.write(cvHtml);

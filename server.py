@@ -186,7 +186,7 @@ def build_prompt(activity, language):
         "describe the current availability/cycle or relevant alternatives, never invent demand, "
         "rankings, statistics, or prices. For account_creation_url and account_deletion_url, "
         "return an exact HTTPS URL only if a cited official source explicitly supports it; "
-        "otherwise return an empty string. Do not confuse the YouthMatch account with an "
+        "otherwise return an empty string. Do not confuse the OpenPath account with an "
         "organizer account. For account_deletion_note, say that no verified official deletion "
         "link was found when applicable. Cite all research claims through Google Search "
         "grounding annotations.\n\n"
@@ -269,8 +269,8 @@ def fetch_summary(activity_id, language):
     }
 
 
-class YouthMatchHandler(BaseHTTPRequestHandler):
-    server_version = "YouthMatchLocal/1.0"
+class OpenPathHandler(BaseHTTPRequestHandler):
+    server_version = "OpenPathLocal/1.0"
     static_files = {
         "/": ("Frontend3.html", "text/html; charset=utf-8"),
         "/Frontend3.html": ("Frontend3.html", "text/html; charset=utf-8"),
@@ -358,14 +358,14 @@ class YouthMatchHandler(BaseHTTPRequestHandler):
 
 
 def main():
-    server = ThreadingHTTPServer((HOST, PORT), YouthMatchHandler)
-    print(f"YouthMatch server listening on http://{HOST}:{PORT}", flush=True)
+    server = ThreadingHTTPServer((HOST, PORT), OpenPathHandler)
+    print(f"OpenPath server listening on http://{HOST}:{PORT}", flush=True)
     if not os.environ.get("GEMINI_API_KEY"):
         print("AI summaries are disabled until GEMINI_API_KEY is set.", flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
-        print("\nStopping YouthMatch server.", flush=True)
+        print("\nStopping OpenPath server.", flush=True)
     finally:
         server.server_close()
 

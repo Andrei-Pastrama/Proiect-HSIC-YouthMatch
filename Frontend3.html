@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="YouthMatch îi ajută pe elevi să găsească activități și programe potrivite intereselor lor."
+      content="OpenPath îi ajută pe elevi să găsească activități și programe potrivite intereselor lor."
     />
     <meta name="theme-color" content="#f7f8fc" />
-    <title>YouthMatch</title>
+    <title>OpenPath</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -35,17 +35,17 @@
     <link rel="stylesheet" href="Frontend2.css" />
   </head>
   <body class="bg-[#f7f8fc] font-sans text-slate-800 antialiased">
-    <a class="announcement-bar" href="#acasa" aria-label="YouthMatch — înapoi la începutul paginii">
+    <a class="announcement-bar" href="#acasa" aria-label="OpenPath — înapoi la începutul paginii">
       <span class="announcement-dot"></span>
-      YouthMatch MVP · Găsește-ți următoarea experiență
+      OpenPath MVP · Găsește-ți următoarea experiență
       <i data-lucide="arrow-up-right" class="announcement-icon"></i>
     </a>
 
     <header class="site-header">
       <div class="header-inner">
-        <a class="brand" href="#acasa" aria-label="YouthMatch — pagina principală">
+        <a class="brand" href="#acasa" aria-label="OpenPath — pagina principală">
           <span class="brand-mark"><i data-lucide="compass"></i></span>
-          <span>YouthMatch</span>
+          <span>OpenPath</span>
           <span class="beta-badge">MVP</span>
         </a>
         <nav class="main-nav" aria-label="Navigare principală">
@@ -97,7 +97,7 @@
             <div class="hero-trust"><i data-lucide="shield-check"></i> Gratuit</div>
           </div>
 
-          <div class="hero-visual" aria-label="Previzualizare YouthMatch">
+          <div class="hero-visual" aria-label="Previzualizare OpenPath">
             <div class="visual-topline"><span class="live-dot"></span> OPORTUNITĂȚI DIN SURSE OFICIALE</div>
             <div class="match-orbit">
               <div class="orbit-ring ring-outer"></div>
@@ -109,7 +109,7 @@
               <span class="orbit-spark orbit-spark-b">✧</span>
               <div class="orbit-center">
                 <i data-lucide="sparkles"></i>
-                <strong>YM</strong>
+                <strong>OP</strong>
                 <span>GĂSEȘTE CE<br />ȚI SE POTRIVEȘTE</span>
               </div>
               <div class="planet-field" id="planet-field"></div>
@@ -161,7 +161,7 @@
         <div class="cards-grid" id="opportunity-grid" aria-live="polite"></div>
         <div id="empty-state" class="hidden"></div>
         <div class="feed-footer">
-          <span><i data-lucide="info"></i> YouthMatch este un prototip. Verifică mereu vârsta, perioada și înscrierea pe site-ul oficial.</span>
+          <span><i data-lucide="info"></i> OpenPath este un prototip. Verifică mereu vârsta, perioada și înscrierea pe site-ul oficial.</span>
           <button id="show-all-button" class="text-button">Arată toate <i data-lucide="arrow-right"></i></button>
         </div>
       </section>
@@ -170,7 +170,7 @@
         <div class="match-intro">
           <div class="eyebrow section-eyebrow">NU ȘTII DE UNDE SĂ ÎNCEPI? <span>✳</span></div>
           <h2>Hai să găsim<br /><span>un punct de pornire.</span></h2>
-          <p>Alege ce-ți place și adaugă câteva lucruri la care te pricepi. YouthMatch îți arată o sugestie simplă — nu e test și nu decide în locul tău.</p>
+          <p>Alege ce-ți place și adaugă câteva lucruri la care te pricepi. OpenPath îți arată o sugestie simplă — nu e test și nu decide în locul tău.</p>
           <div class="match-points">
             <div><span class="check-dot"><i data-lucide="check"></i></span><span><strong>Nu ai nevoie de experiență</strong><small>Începe cu ce te interesează.</small></span></div>
             <div><span class="check-dot"><i data-lucide="check"></i></span><span><strong>Sugestii ghidate de interesele tale</strong><small>Selectează domenii și află de unde să începi.</small></span></div>
@@ -201,9 +201,9 @@
     </main>
 
     <footer class="site-footer">
-      <a class="brand footer-brand" href="#acasa"><span class="brand-mark"><i data-lucide="compass"></i></span><span>YouthMatch</span></a>
+      <a class="brand footer-brand" href="#acasa"><span class="brand-mark"><i data-lucide="compass"></i></span><span>OpenPath</span></a>
       <span>Făcut cu <span class="footer-heart">♥</span> pentru elevii care vor să încerce ceva nou.</span>
-      <span>© 2026 YouthMatch · MVP</span>
+      <span>© 2026 OpenPath · MVP</span>
     </footer>
     <dialog class="activity-dialog" id="activity-dialog" aria-labelledby="activity-dialog-title">
       <div class="activity-dialog-card">
@@ -218,7 +218,7 @@
         <section class="ai-summary-panel" aria-labelledby="ai-summary-heading">
           <div class="ai-summary-heading">
             <span class="ai-summary-icon"><i data-lucide="sparkles"></i></span>
-            <div><span class="simulator-kicker">YOUTHMATCH AI</span><h3 id="ai-summary-heading">Rezumat și context</h3></div>
+            <div><span class="simulator-kicker">OPENPATH AI</span><h3 id="ai-summary-heading">Rezumat și context</h3></div>
           </div>
           <p class="ai-summary-status" id="ai-summary-status" role="status" aria-live="polite"></p>
           <div class="ai-summary-content hidden" id="ai-summary-content">
@@ -229,7 +229,7 @@
             <section><h4>Cum aplici</h4><p id="ai-application-steps"></p></section>
             <section class="account-link-section">
               <h4>Conturi și înscriere</h4>
-              <p class="account-link-disclaimer">YouthMatch nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.</p>
+              <p class="account-link-disclaimer">OpenPath nu creează și nu șterge conturi pe platforma organizatorului. Aceste acțiuni se fac direct la serviciul respectiv.</p>
               <div class="account-link-actions">
                 <a class="button button-primary hidden" id="ai-account-create" target="_blank" rel="noopener noreferrer">Cont / înscriere la organizator <i data-lucide="external-link"></i></a>
                 <a class="button button-outline hidden" id="ai-account-delete" target="_blank" rel="noopener noreferrer">Informații despre ștergerea contului <i data-lucide="external-link"></i></a>
@@ -253,7 +253,7 @@
       <div class="account-dialog-card">
         <button class="account-close" id="account-close" type="button" aria-label="Închide"><i data-lucide="x"></i></button>
         <div class="account-dialog-icon"><i data-lucide="user-round-plus"></i></div>
-        <h2 id="account-dialog-title">Creează cont YouthMatch</h2>
+        <h2 id="account-dialog-title">Creează cont OpenPath</h2>
         <p class="account-dialog-note">Demo local: contul este disponibil doar în browserul acestui dispozitiv; nu există server sau sincronizare.</p>
         <div class="account-mode-switch" id="account-mode-switch" role="tablist" aria-label="Tipul de acces">
           <button class="account-mode active" id="account-register-mode" type="button" role="tab" aria-selected="true">Creează cont</button>
@@ -283,7 +283,7 @@
           <p id="account-welcome"></p>
           <section class="cv-builder" aria-labelledby="cv-builder-title">
             <div class="cv-builder-heading">
-              <div><span class="simulator-kicker">YOUTHMATCH</span><h3 id="cv-builder-title" tabindex="-1">CV-ul tău Europass</h3></div>
+              <div><span class="simulator-kicker">OPENPATH</span><h3 id="cv-builder-title" tabindex="-1">CV-ul tău Europass</h3></div>
               <i data-lucide="file-user" aria-hidden="true"></i>
             </div>
             <p class="cv-builder-note">Completează profilul și adaugă experiențe pe care le-ai avut deja. Datele rămân salvate doar în acest browser.</p>
@@ -298,7 +298,7 @@
             <div class="cv-experience-section">
               <h4>Experiențe și activități</h4>
               <form id="cv-experience-form">
-                <label class="account-field"><span>Activitate YouthMatch</span><select id="cv-activity" name="activity" required><option value="">Alege activitatea</option></select></label>
+                <label class="account-field"><span>Activitate OpenPath</span><select id="cv-activity" name="activity" required><option value="">Alege activitatea</option></select></label>
                 <label class="account-field"><span>Rolul tău</span><input id="cv-role" name="role" type="text" required maxlength="100" placeholder="ex. Voluntar, participant, organizator" /></label>
                 <label class="account-field"><span>Perioadă</span><input id="cv-period" name="period" type="text" required maxlength="80" placeholder="ex. Iunie–august 2025" /></label>
                 <label class="account-field"><span>Ce ai făcut și ce ai învățat</span><textarea id="cv-description" name="description" rows="3" required maxlength="1000"></textarea></label>
